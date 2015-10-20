@@ -112,14 +112,13 @@ free software means users have the four essential freedoms: \begin{enumerate}
 \includegraphics[width = 0.3\textheight]{/home/ben/Open_Access_Week_2015/Open_Science_Talk/Slides/Figures/GNU_700.png}
 \end{figure}
 \end{center}
-
-
 \end{frame}
 
 
 \begin{frame}
 
 \begin{block}{Practical Reasons}
+\frametitle{Why Use Free and Open Source Software for Research?}
 Makes your research workflow:
 \begin{itemize}
 \item cheaper
@@ -130,8 +129,8 @@ Makes your research workflow:
 Makes you:
 \begin{itemize}
 \item easier to collaborate with 
-\item able to work anywhere with a computer and internet connection
-\item Part of a scientific community that includes \begin{itemize}
+\item able to work anywhere where there is a computer \& internet connection
+\item Part of a scientific community of open source software users that includes \begin{itemize}
       \item \href{https://training.linuxfoundation.org/why-our-linux-training/training-reviews/linux-foundation-training-prepares-the-international-space-station-for-linux-migration}{International Space Station} 
       \item \href{https://linux.web.cern.ch/linux/scientific.shtml}{CERN}
 \end{itemize}
@@ -142,79 +141,77 @@ Makes you:
 \end{frame}
 
 \begin{frame}
-\frametitle{Some of My Favourite Free and Open Source Software for Academia}
+\frametitle{My Favourite Free and Open Source Software for Academia}
 \begin{tabular}{ll}
-Operating System       & \href{https://www.gnu.org/}{GNU} + \href{https://kernel.org/}{Linux} \\
-                       & \\
-Web Browser            & \href{https://www.mozilla.org}{Firefox} \\
-                       & \\
-Reference Managers     &  \href{https://www.zotero.org/}{Zotero} \& \href{http://jabref.sourceforge.net/}{JabRef} \\
-                       & \\
-Document Preparation   & \href{https://www.latex-project.org/}{LaTeX} \\
-                       & \\
-Writing Code (IDE)     & \href{https://www.gnu.org/software/emacs/}{Emacs} \\
-                       & \\
-Statistics \& Graphics & \href{https://cran.r-project.org/}{R} \\
-              & \\
+Operating System              & \href{https://www.gnu.org/}{GNU} + \href{https://kernel.org/}{Linux} \\
+                              & \\
+Web Browser                   & \href{https://www.mozilla.org}{Firefox} \\
+                              & \\
+Reference Managers            &  \href{https://www.zotero.org/}{Zotero} \& \href{http://jabref.sourceforge.net/}{JabRef} \\
+                              & \\
+Document Preparation          & \href{https://www.latex-project.org/}{LaTeX} \\
+                              & \\
+Writing Code (IDE)            & \href{https://www.gnu.org/software/emacs/}{Emacs} \\
+                              & \\
+Statistics \& Graphics        & \href{https://cran.r-project.org/}{R} \\
+                              & \\
 Geographic Information System & \href{http://www.saga-gis.org/en/index.html}{SAGA} \\
-           & \\
-Version Control & \href{https://git-scm.com/}{Git} \\
-           & \\
-Diff Tool & \href{http://meldmerge.org/}{Meld} \\
-           & \\
-Document Conversion & Pandoc \\
+                              & \\
+Version Control               & \href{https://git-scm.com/}{Git} \\
+                              & \\
+Diff Tool                     & \href{http://meldmerge.org/}{Meld} \\
+                              & \\
+Document Conversion           & Pandoc \\
 \end{tabular}
 
 \end{frame}
-
-\begin{frame}
-\frametitle{Alternatives}
-\begin{tabular}{ll}
-Document Preparation & \href{https://www.libreoffice.org/}{Libre Office} \& \href{https://www.openoffice.org/}{Apache Open Office} \\
-& \\
-Document Conversion & \href{http://pandoc.org/}{Pandoc} \\
-\end{tabular}
-
-\end{frame}
-
 
 \begin{frame}
 \frametitle{Demo}
-\begin{enumerate}
-\item quick look at Libre Office Writer, Calc and Impress 
-\newline
-\item reference management with Zotero and or JabRef
-\newline
-\item a longer look at LaTeX including \begin{enumerate}  
-      \item an article with a Journal Style File
-      \item a slide show with (Beamer)
-      \item a poster 
-\newline
-\end{enumerate}
-\item version control of LaTeX documents
-\end{enumerate}
-
-\end{frame}
-
-
-\begin{frame}
-Compiled Slides on FigShare
-.tex Source on GitHub
-
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Free and Open Source Software useful for Academia}
+A quick look at \href{https://www.libreoffice.org/}{Libre Office}
 \begin{center}
 \begin{figure}
-\includegraphics[height = 0.9\textheight]{/home/ben/Open_Access_Week_2015/Open_Science_Talk/Slides/Figures/oa_week_fillled_hex_clip.png}
+\includegraphics[width = \textwidth]{/home/ben/Open_Access_Week_2015/Open_Science_Talk/Slides/Figures/Libre_Office_Writer.png}
 \end{figure}
 \end{center}
+Libre Office Writer, Calc \& Impress are inspired by MS Word, Excel \& Powerpoint respectively.
 \end{frame}
 
 \begin{frame}
-\frametitle{Code Repository Hosting}
+\frametitle{Demo}
+A quick look reference management with \href{https://www.zotero.org/}{Zotero}.
+\begin{center}
+\begin{figure}
+\includegraphics[width = \textwidth]{/home/ben/Open_Access_Week_2015/Open_Science_Talk/Slides/Figures/Zotero_Screenshot.png}
+\end{figure}
+\end{center}
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Demo}
+A longer look at LaTeX including: \begin{enumerate}  
+      \item an Article formatted with a Journal Style File
+\newline
+      \item a Slide Show with LaTeX class `Beamer'
+\newline
+      \item a Poster also formatted with `Beamer'
+\newline
+\newline
+\end{enumerate}
+\href{http://pandoc.org/}{Pandoc} will convert simple .tex files to .docx files reasonably well...
+\end{frame}
+
+\begin{frame}
+\frametitle{Collaborating \& Tracking Changes}
+LaTeX files (.tex) are code files \& so may be version controlled with tradition version control software e.g. \href{https://git-scm.com/}{Git}.
+\newline
+\newline
+Version control of a .tex file allows collaborative editing and change tracking functionality analogous to MS Word style tracked changes and comments along with much more...
+\newline
+\newline
+Code Repository Hosting:
 \begin{center}
 
 \begin{figure}
@@ -225,10 +222,24 @@ Compiled Slides on FigShare
 \includegraphics[height = 0.15\textheight]{/home/ben/Open_Access_Week_2015/Open_Science_Talk/Slides/Figures/GitHub.png}
 \end{figure}
 \end{center}
-
 \end{frame}
 
+\begin{frame}
+\frametitle{Thanks for Listening...Any Questions?}
+\begin{center}
+\begin{figure}
+\includegraphics[height = 0.9\textheight]{/home/ben/Open_Access_Week_2015/Open_Science_Talk/Slides/Figures/oa_week_fillled_hex_clip.png}
+\end{figure}
+\end{center}
+\end{frame}
 
-
+\begin{frame}
+Compiled Slides:
+\small \url{http://figshare.com/authors/Benjamin_Fitzpatrick/815464}
+\newline
+\newline
+Slides Source:
+\small \url{https://github.com/brfitzpatrick/OAWeek2015_Slides}
+\end{frame}
 
 \end{document}
