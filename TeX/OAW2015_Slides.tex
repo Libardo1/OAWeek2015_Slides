@@ -1,0 +1,234 @@
+\documentclass[xcolor=dvipsnames]{beamer} 
+\usecolortheme[named=Blue]{structure} 
+\usetheme[height=10.5mm]{Rochester} 
+\setbeamertemplate{items}[ball] 
+\setbeamertemplate{blocks}[rounded][shadow=true] 
+\setbeamertemplate{navigation symbols}{} 
+\usepackage{bm}
+\usepackage{listings}
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{textcomp}
+\usepackage{upquote}
+\usepackage[absolute,overlay]{textpos}
+\newenvironment{reference}[2]{%
+  \begin{textblock*}{\textwidth}(#1,#2)
+      \footnotesize\it\bgroup\color{red!50!black}}{\egroup\end{textblock*}}
+%\graphicspath{ {/home/ben/PhD/Armidale_Updates/2014_03_14/Figures/} }
+\begin{document}
+
+%%% New plan for this module:
+%%% we all use Git on the command line and view GitHub in our web browsers
+%%% clone and commit via HTTPS
+%%% Workflow plan:
+%%%
+%%% Create repo in web browser
+%%% Authenticate on cmd line
+%%% Clone
+%%% Add files
+%%% Edit
+%%% git add
+%%% git commit
+%%% branch and revert to previous version with check out
+
+
+%%% Getting on the command line in various OS's
+
+%%% MS Windows -> Start Menue -> Powershell
+%%% Mac OS -> Finder -> terminal
+%%% GNU+Linux users -> application launcher (will vary depending on GUI) -> terminal 
+
+
+\begin{frame} %1
+% \frametitle{Addressing Common Challenges in Spatial Modeling of Ecologies and Environments}
+\begin{center}
+\textbf{\huge Open Research with Open Source Software}\\
+\end{center}
+
+\begin{figure}
+%\includegraphics[width = 0.35\textwidth]{/home/ben/Intro_to_R/GitHub_Slides_Source/Images/GitHub-Mark-120px-plus.png}
+\begin{columns}
+
+\begin{column}{3.3cm}
+\begin{center}
+\begin{figure}
+\includegraphics[width = 0.2\textheight]{/home/ben/Open_Access_Week_2015/Open_Science_Talk/Slides/Figures/GNU_700.png}
+\end{figure}
+\end{center}
+\end{column} 
+
+\begin{column}{3.3cm}
+\begin{center}
+\begin{figure}
+\includegraphics[width = 0.2\textheight]{/home/ben/Open_Access_Week_2015/Open_Science_Talk/Slides/Figures/Tux_700h.png}
+\end{figure}
+\end{center}
+\end{column} 
+
+\begin{column}{3.3cm}
+\begin{center}
+\begin{figure}
+\includegraphics[width = 0.2\textheight]{/home/ben/Open_Access_Week_2015/Open_Science_Talk/Slides/Figures/OA_700h.png}
+\end{figure}
+\end{center}
+\end{column} 
+
+\end{columns}
+\end{figure}
+
+\small Ben R. Fitzpatrick\\
+\tiny PhD Candidate, Statistical Science, Mathematical Sciences School, Queensland University of Technology
+\newline
+\begin{columns}
+\begin{column}{3cm}
+\tiny 0000-0003-1916-0939
+\end{column}
+\begin{column}{3cm}
+\tiny github.com/brfitzpatrick/
+\end{column}
+\begin{column}{3cm}
+\tiny @benrfitzpatrick
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Why Use Free and Open Source Software for Research?}
+\begin{block}{Ideological Reasons}
+free software means users have the four essential freedoms: \begin{enumerate}
+ \setcounter{enumi}{-1}
+ \item to run the program, 
+ \item to study and change the program in source code form,
+ \item to redistribute exact copies and
+ \item to distribute modified versions. \end{enumerate}
+\begin{center} \small- \url{https://www.gnu.org/philosophy/philosophy.html}
+\end{center}
+\end{block}
+
+\begin{center}
+\begin{figure}
+\includegraphics[width = 0.3\textheight]{/home/ben/Open_Access_Week_2015/Open_Science_Talk/Slides/Figures/GNU_700.png}
+\end{figure}
+\end{center}
+
+
+\end{frame}
+
+
+\begin{frame}
+
+\begin{block}{Practical Reasons}
+Makes your research workflow:
+\begin{itemize}
+\item cheaper
+\item more reproducible 
+\newline
+\end{itemize}
+
+Makes you:
+\begin{itemize}
+\item easier to collaborate with 
+\item able to work anywhere with a computer and internet connection
+\item Part of a scientific community that includes \begin{itemize}
+      \item \href{https://training.linuxfoundation.org/why-our-linux-training/training-reviews/linux-foundation-training-prepares-the-international-space-station-for-linux-migration}{International Space Station} 
+      \item \href{https://linux.web.cern.ch/linux/scientific.shtml}{CERN}
+\end{itemize}
+\end{itemize}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Some of My Favourite Free and Open Source Software for Academia}
+\begin{tabular}{ll}
+Operating System       & \href{https://www.gnu.org/}{GNU} + \href{https://kernel.org/}{Linux} \\
+                       & \\
+Web Browser            & \href{https://www.mozilla.org}{Firefox} \\
+                       & \\
+Reference Managers     &  \href{https://www.zotero.org/}{Zotero} \& \href{http://jabref.sourceforge.net/}{JabRef} \\
+                       & \\
+Document Preparation   & \href{https://www.latex-project.org/}{LaTeX} \\
+                       & \\
+Writing Code (IDE)     & \href{https://www.gnu.org/software/emacs/}{Emacs} \\
+                       & \\
+Statistics \& Graphics & \href{https://cran.r-project.org/}{R} \\
+              & \\
+Geographic Information System & \href{http://www.saga-gis.org/en/index.html}{SAGA} \\
+           & \\
+Version Control & \href{https://git-scm.com/}{Git} \\
+           & \\
+Diff Tool & \href{http://meldmerge.org/}{Meld} \\
+           & \\
+Document Conversion & Pandoc \\
+\end{tabular}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Alternatives}
+\begin{tabular}{ll}
+Document Preparation & \href{https://www.libreoffice.org/}{Libre Office} \& \href{https://www.openoffice.org/}{Apache Open Office} \\
+& \\
+Document Conversion & \href{http://pandoc.org/}{Pandoc} \\
+\end{tabular}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Demo}
+\begin{enumerate}
+\item quick look at Libre Office Writer, Calc and Impress 
+\newline
+\item reference management with Zotero and or JabRef
+\newline
+\item a longer look at LaTeX including \begin{enumerate}  
+      \item an article with a Journal Style File
+      \item a slide show with (Beamer)
+      \item a poster 
+\newline
+\end{enumerate}
+\item version control of LaTeX documents
+\end{enumerate}
+
+\end{frame}
+
+
+\begin{frame}
+Compiled Slides on FigShare
+.tex Source on GitHub
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Free and Open Source Software useful for Academia}
+\begin{center}
+\begin{figure}
+\includegraphics[height = 0.9\textheight]{/home/ben/Open_Access_Week_2015/Open_Science_Talk/Slides/Figures/oa_week_fillled_hex_clip.png}
+\end{figure}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Code Repository Hosting}
+\begin{center}
+
+\begin{figure}
+\includegraphics[height = 0.3\textheight]{/home/ben/Open_Access_Week_2015/Open_Science_Talk/Slides/Figures/Atlassian_Bitbucket_Logo.png}
+\end{figure}
+
+\begin{figure}
+\includegraphics[height = 0.15\textheight]{/home/ben/Open_Access_Week_2015/Open_Science_Talk/Slides/Figures/GitHub.png}
+\end{figure}
+\end{center}
+
+\end{frame}
+
+
+
+
+\end{document}
