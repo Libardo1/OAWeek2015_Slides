@@ -1,0 +1,9 @@
+
+# Files we don't need to version control:
+OAW2015_Slides.aux
+OAW2015_Slides.nav
+OAW2015_Slides.pdf
+OAW2015_Slides.log
+OAW2015_Slides.out
+OAW2015_Slides.snm
+OAW2015_Slides.toc
